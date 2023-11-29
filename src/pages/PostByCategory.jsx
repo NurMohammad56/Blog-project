@@ -15,7 +15,7 @@ const PostByCategory = () => {
       let res = await postByCategory(categoryID);
       setList(res);
     })();
-  }, []);
+  }, [categoryID]);
 
   return (
     <Layout>{list === null ? <Loader /> : <BlogLists list={list} />}</Layout>

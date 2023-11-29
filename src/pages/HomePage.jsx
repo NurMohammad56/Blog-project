@@ -12,7 +12,7 @@ const HomePage = () => {
       let res = await latestPost();
       setList(res);
     })();
-  });
+  }, []);
   return (
     <Layout>{list === null ? <Loader /> : <BlogLists list={list} />}</Layout>
   );

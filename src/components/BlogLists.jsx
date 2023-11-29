@@ -7,7 +7,11 @@ const BlogLists = (props) => {
         <div className="grid grid-cols-1 mt-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {props.list.map((item, i) => {
             return (
-              <Link key={i} className="card w-100 glass">
+              <Link
+                key={i}
+                to={"/details/" + item["id"]}
+                className="card w-100 glass"
+              >
                 <figure>
                   <img src={item["img"]} alt="Card" />
                 </figure>
